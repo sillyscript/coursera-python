@@ -12,7 +12,7 @@ The purpose of this repository is to help learners with quizzes and assignments 
 
 The Python for Everybody Specialization introduces the fundamentals of programming using Python. This series focuses on key topics such as data structures, accessing web data, and using databases with Python. The courses are designed for learners with no prior programming experience, offering a hands-on approach to learning Python for data retrieval, processing, and visualization.
 
-###Courses Covered:
+### Courses Covered:
 
     Programming for Everybody (Getting Started with Python)
     An introductory course teaching the basics of Python programming and fundamental concepts.

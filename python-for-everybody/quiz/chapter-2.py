@@ -1,3 +1,4 @@
+__author__ = "Prayas"
 
 Question 1
 Which of the following is a comment in Python?

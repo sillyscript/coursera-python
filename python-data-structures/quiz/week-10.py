@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 questions = [
     {
         "question": "What is the difference between a Python tuple and Python list?",

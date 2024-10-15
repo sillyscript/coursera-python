@@ -7,11 +7,29 @@ This repository contains quiz notes and assignment answers for three courses fro
     Using Python to Scrape Web Data
 
 The purpose of this repository is to help learners with quizzes and assignments for educational purposes only.
+
 ## Courses Overview
 
-    Getting Started with Python: Basics of Python, including variables, expressions, functions, and conditional statements.
-    Python Data Structures: Lists, dictionaries, tuples, and advanced data management techniques.
-    Using Python to Scrape Web Data: HTML parsing and web scraping using BeautifulSoup, reading and extracting data from websites.
+The Python for Everybody Specialization introduces the fundamentals of programming using Python. This series focuses on key topics such as data structures, accessing web data, and using databases with Python. The courses are designed for learners with no prior programming experience, offering a hands-on approach to learning Python for data retrieval, processing, and visualization.
+
+###Courses Covered:
+
+    Programming for Everybody (Getting Started with Python)
+    An introductory course teaching the basics of Python programming and fundamental concepts.
+    Duration: 7 weeks
+
+    Python Data Structures
+    Focuses on the core data structures in Python such as lists, dictionaries, and tuples.
+    Duration: 7 weeks
+
+    Using Python to Access Web Data
+    Learn how to scrape and process data from the web using Python libraries such as urllib and BeautifulSoup.
+    Duration: 6 weeks
+
+This series of courses is part of a broader specialization aimed at providing the skills to develop programs, retrieve, and manipulate data effectively.
+
+(Source: University of Michigan, Coursera​
+Coursera | Michigan Online)
 
 ## Content
 
@@ -21,6 +39,7 @@ The purpose of this repository is to help learners with quizzes and assignments 
 ## Disclaimer
 
 This repository is for educational purposes only. It is intended to assist learners in understanding course material and is not affiliated with or endorsed by the University of Michigan or Coursera. Please respect the course's intellectual property and use this content responsibly.
-Contributions
+
+##Contributions
 
 Contributions are welcome! Feel free to add more content or improve existing solutions.

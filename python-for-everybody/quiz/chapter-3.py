@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 Question 1
 What do we do to a Python statement that is immediately after an if statement to indicate that the statement is to be executed only when the if statement is true?
 

@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 if __name__ == '__main__':
     try:
         fname = input('Enter file name: ')

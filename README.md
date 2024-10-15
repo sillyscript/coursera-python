@@ -28,8 +28,7 @@ The Python for Everybody Specialization introduces the fundamentals of programmi
 
 This series of courses is part of a broader specialization aimed at providing the skills to develop programs, retrieve, and manipulate data effectively.
 
-(Source: University of Michigan, Coursera​
-Coursera | Michigan Online)
+(Source: University of Michigan | Coursera​ | Michigan Online)
 
 ## Content
 

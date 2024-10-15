@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 Question 1
 Given the architecture and terminology we introduced in Chapter 1, where are files stored?
 Motherboard

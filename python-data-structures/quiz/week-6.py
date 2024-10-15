@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 #Question 1
 What does the following Python Program print out?
 str1 = "Hello"

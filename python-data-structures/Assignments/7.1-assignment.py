@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 fname = input("Enter file name: ")
 fh = open(fname)
 

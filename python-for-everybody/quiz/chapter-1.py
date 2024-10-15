@@ -1,3 +1,5 @@
+__author__ = "Prayas"
+
 Question 1
 When Python is running in the interactive mode and displaying the chevron prompt (>>>) - 
 what question is Python asking you?

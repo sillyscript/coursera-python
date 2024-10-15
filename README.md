@@ -39,6 +39,6 @@ This series of courses is part of a broader specialization aimed at providing th
 
 This repository is for educational purposes only. It is intended to assist learners in understanding course material and is not affiliated with or endorsed by the University of Michigan or Coursera. Please respect the course's intellectual property and use this content responsibly.
 
-##Contributions
+## Contributions
 
 Contributions are welcome! Feel free to add more content or improve existing solutions.

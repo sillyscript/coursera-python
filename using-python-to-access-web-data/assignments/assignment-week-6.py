@@ -17,24 +17,19 @@ print('Sum:', sum)
 
 
 #Using The Geo JSON API
-import urllib.request, urllib.parse, urllib.error
-import json
+import urllib.request, urllib.parse, json
 
-#Api
-api = 'http://py4e-data.dr-chuck.net/geojson?'
+serviceurl = 'http://py4e-data.dr-chuck.net/opengeo?'
 
-#Input data
-link = input('Enter location: ')
-link = api + urllib.parse.urlencode({'address':link})
-print('Retrieving', link)
+address = 'Illinois State University Joliet Junior College'
+url = serviceurl + urllib.parse.urlencode({'q': address})
 
-html = urllib.request.urlopen(link).read().decode()
-print('Retrieved', len(html), 'characters')
+data = urllib.request.urlopen(url).read().decode()
+info = json.loads(data)
 
-try:
-    js = json.loads(html)
-except:
-    js = None
+#This line is not correct,
+#run it in terminal print the info then parse through that info to get the plus code properly. 
+#As far as I remember it also had a list so put accordingly. 
+plus_code = info['plus_code']['global_code']
 
-placeId = js['results'][0]['place_id']
-print('Place id', placeId)
+print('Plus code:', plus_code)

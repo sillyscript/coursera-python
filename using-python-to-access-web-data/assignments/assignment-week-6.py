@@ -1,28 +1,19 @@
 __author__ = "Prayas"
 
 #Extracting Data From JSON
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import json
 
-link = input('Enter location: ')
-print('Retrieving', link)
+url = 'http://py4e-data.dr-chuck.net/comments_2089613.json'
+data = urllib.request.urlopen(url).read().decode()
 
-html = urllib.request.urlopen(link).read().decode()
-print('Retrieved', len(html), 'characters')
+info = json.loads(data)
+sum = 0
 
-try:
-    js = json.loads(html)
-except:
-    js = None
+for item in info['comments']:
+    sum += int(item['count'])
 
-cn = 0
-sm = 0
-for item in js['comments']:
-    cn += 1
-    sm += int(item['count'])
-
-print('Count:', cn)
-print('Sum:', sm)
+print('Sum:', sum)
 
 
 #Using The Geo JSON API

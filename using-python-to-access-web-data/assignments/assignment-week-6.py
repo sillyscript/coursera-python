@@ -21,15 +21,14 @@ import urllib.request, urllib.parse, json
 
 serviceurl = 'http://py4e-data.dr-chuck.net/opengeo?'
 
-address = 'Illinois State University Joliet Junior College'
+#The following address is different for different students. 
+#Choose any one of them by adding a # to the line at the beginning
+address = 'Illinois State University Joliet Junior College'#Plus code is 86GGGX9R+5J
+address = 'Universidad de la Sabana'#Plus code is 67P7VX68+9P
+
 url = serviceurl + urllib.parse.urlencode({'q': address})
 
 data = urllib.request.urlopen(url).read().decode()
 info = json.loads(data)
 
-#This line is not correct,
-#run it in terminal print the info then parse through that info to get the plus code properly. 
-#As far as I remember it also had a list so put accordingly. 
-plus_code = info['plus_code']['global_code']
-
-print('Plus code:', plus_code)
+print(info['features'][0]['properties'] ['plus_code'])

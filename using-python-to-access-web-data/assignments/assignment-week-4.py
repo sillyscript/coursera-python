@@ -1,37 +1,23 @@
 __author__ = "Prayas"
 
-#Following links in HTML using BeautifulSoup
-import urllib.request, urllib.parse, urllib.error
+#Scraping numbers from HTML using BS4
+import urllib.request
 from bs4 import BeautifulSoup
-import ssl
 
-#SSL Certification Error Handle
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
+url = 'http://py4e-data.dr-chuck.net/comments_2091695.html'
+#url = 'https://py4e-data.dr-chuck.net/comments_2110014.html'
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, "html.parser")
+tags = soup('span')
+total_sum = 0
 
-#Data Collection
-link = input('Enter URL: ')
-cont = int(input('Enter count: '))
-line = int(input('Enter position: '))
+for tag in tags:
+    total_sum += int(tag.text)
 
+print("Sum:", total_sum)
 
-
-print('Retrieving: %s' % link)
-for i in range(0, cont):
-    html = urllib.request.urlopen(link, context=ctx).read()
-    soup = BeautifulSoup(html, 'html.parser')
-    
-    tags = soup('a')
-    cn = 0
-    ps = 0
-    for tag in tags:
-        ps += 1
-        if ps == line:
-            print('Retrieving: %s' % str(tag.get('href', None)))
-            link = str(tag.get('href', None))
-            ps = 0
-            break
+#sum is 2194 for 2091695
+#sum is 2696 for 2110014
 
 
 #ScrapingHTMLDataWithBeautifulSoup

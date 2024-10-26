@@ -21,28 +21,22 @@ print("Sum:", total_sum)
 
 
 #ScrapingHTMLDataWithBeautifulSoup
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 from bs4 import BeautifulSoup
-import ssl
 
-#Get SSL Certification Error handeling
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
+url = 'http://py4e-data.dr-chuck.net/known_by_Payton.html' #ans is Sanjay
+#url = 'http://py4e-data.dr-chuck.net/known_by_Reis.html' #ans is Archibald
+#url = 'http://py4e-data.dr-chuck.net/known_by_Fikret.html' #ans is Archibald
+##url = 'http://py4e-data.dr-chuck.net/known_by_Fikret.html' #ans is Ala
 
-#Data Collect From the Website
-link = input('Enter - ')
-html = urllib.request.urlopen(link, context = ctx).read()
-soup = BeautifulSoup(html, 'html.parser')
+count = 7
+position = 18
 
+for i in range(count):
+    html = urllib.request.urlopen(url).read()
+    soup = BeautifulSoup(html, 'html.parser')
+    tags = soup('a')
+    print('Retrieving:', url)
+    url = tags[position - 1].get('href', None)
 
-#Data Scraping
-tags = soup('span')
-sm = 0
-cn = 0
-for tag in tags:
-    cn += 1
-    sm += int(tag.contents[0])
-
-print('Count %d' % cn)
-print('Sum %d' % sm)
+print('Last name in sequence:', url.split('_')[-1].split('.')[0])

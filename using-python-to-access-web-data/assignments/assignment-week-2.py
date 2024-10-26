@@ -2,7 +2,9 @@ __author__ = "Prayas"
 
 import re
 
-file_name = "regex_sum_2110012.txt" 
+#check file name before execution it could be 2091693
+#file_name = "regex_sum_2110012.txt"
+file_name = "regex_sum_2091693.txt" 
 with open(file_name, 'r') as file:
     text = file.read()
 

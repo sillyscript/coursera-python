@@ -2,16 +2,12 @@ __author__ = "Prayas"
 
 import re
 
-if __name__ == '__main__':
-    file = open('regex_sum_110092.txt')
-    sm = 0
-    wd = 0
-    for line in file:
-        temp = line.rstrip()
-        temp = re.findall('[0-9]+', temp)
-        if len(temp) > 0:
-            for w in temp:
-                wd += 1
-                sm += int(w)
+file_name = "regex_sum_2110012.txt" 
+with open(file_name, 'r') as file:
+    text = file.read()
 
-    print('The sum for the sample text above is %d\n' % sm)
+numbers = re.findall(r'[0-9]+', text)
+
+total_sum = sum(int(num) for num in numbers)
+
+print("Sum:", total_sum)

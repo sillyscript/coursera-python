@@ -1,21 +1,16 @@
 __author__ = "Prayas"
 
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import xml.etree.ElementTree as ET
 
-link = input('Enter location: ')
-html = urllib.request.urlopen(link).read().decode()
-print('Retrieving', link)
-print('Retrieved', len(html), 'characters')
+url = 'http://py4e-data.dr-chuck.net/comments_2089612.xml'
+data = urllib.request.urlopen(url).read()
 
-cn = 0
-sm = 0
-data = ET.fromstring(html)
-tags = data.findall('comments/comment')
+tree = ET.fromstring(data)
+counts = tree.findall('.//count')
 
-for tag in tags:
-    cn += 1
-    sm += int(tag.find('count').text)
+sum = 0
+for count in counts:
+    sum += int(count.text)
 
-print('Count:', cn)
-print('Sum:', sm)
+print('Sum:', sum)

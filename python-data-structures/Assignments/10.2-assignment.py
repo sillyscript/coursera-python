@@ -1,7 +1,9 @@
 __author__ = "Prayas"
 
 if __name__ == '__main__':
-    fname = 'mbox-short.txt'
+    fname = input('Enter file:')
+    if len(fname) < 1:
+        fname = 'mbox-short.txt'
 
     handle = open(fname)
     m = dict()

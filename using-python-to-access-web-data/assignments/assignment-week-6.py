@@ -13,7 +13,7 @@ sum = 0
 for item in info['comments']:
     sum += int(item['count'])
 
-print('Sum:', sum)
+print('Sum:', sum)#2259
 
 
 #Using The Geo JSON API

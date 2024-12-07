@@ -13,4 +13,4 @@ sum = 0
 for count in counts:
     sum += int(count.text)
 
-print('Sum:', sum)
+print('Sum:', sum)#2588
